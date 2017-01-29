@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+line_items = LineItem.create([
+    { description: 'Tuts+ Subscription April 2016', price: 15.0 }, 
+    { description: 'Ruby eBook', price: 9.90} ])
+Invoice.create(
+    client: 'Pedro Alonso', 
+    total: 24.90, 
+    line_items: line_items, 
+    date: Date.new(2016, 4, 1))
