@@ -30,4 +30,8 @@
     <p><strong>Notes:</strong> <%= @invoice.notes %></p>
   </div>
   <% end %>
+  <%= link_to "Download PDF",
+  invoice_download_path(@invoice, format: "pdf"),
+  target: "_blank",
+  class: "download" %>
 </div>
